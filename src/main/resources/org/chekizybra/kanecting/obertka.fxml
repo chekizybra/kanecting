@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" stylesheets="@style.css" fx:controller="org.chekizybra.kanecting.Сontroller">
+    <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="МЕМЫ" />
+
+    <HBox spacing="10">
+        <TextField fx:id="memeField" promptText="мем" />
+        <TextField fx:id="originField" promptText="происхождение" />
+        <TextField fx:id="yearField" promptText="год" />
+        <Button onAction="#onAdd" text="добавить" />
+    </HBox>
+
+    <TableView fx:id="memeTable" prefHeight="300" prefWidth="450.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+            <TableColumn fx:id="memeColumn" prefWidth="200" text="мем" />
+            <TableColumn fx:id="originColumn" prefWidth="150" text="происхождение" />
+            <TableColumn fx:id="yearColumn" prefWidth="50" text="год" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="deleteIdField" promptText="ID поля для удаления" />
+        <Button onAction="#onDelete" text="удалить" />
+        <Button onAction="#onRefresh" text="обновить список" />
+    </HBox>
+</VBox>
